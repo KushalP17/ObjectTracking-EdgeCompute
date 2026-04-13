@@ -1,0 +1,8 @@
+.venv/
+datasets/
+runs/
+*.engine
+*.onnx
+*.pt
+*.torchscript
+*.deb
