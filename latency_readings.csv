@@ -1,0 +1,6 @@
+YOLO v8n Latency MetricsYOLO v8n Latency MetricsYOLO v8n Latency MetricsYOLO v8n Latency MetricsYOLO v8n Latency MetricsYOLO v8n Latency MetricsYOLO v8n Latency Metrics{'preprocess': 1.2212577265628966, 'inference': 15.708765578125394, 'loss': 0.016811398435123692, 'postprocess': 9.670557249997103}YOLO v8n Latency Metrics
+{'preprocess': 1.2188432656259351, 'inference': 14.02505696875167, 'loss': 0.03276686718578503, 'postprocess': 7.231870031251475}
+
+YOLO v8n Latency Metrics
+{'preprocess': 1.1743736875047261, 'inference': 14.791738546872324, 'loss': 0.02853292968296728, 'postprocess': 9.2748943359382}
+
