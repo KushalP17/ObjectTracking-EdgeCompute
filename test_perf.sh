@@ -3,17 +3,17 @@ yolo_size_array=("n")
 model_type=("pt" "onnx" "engine")
 
 for size in "${yolo_size_array[@]}"; do
-    
-    echo "YOLOv8${size} Metrics" >> power_mem_readings.csv
+    for model in "${model_type[@]}"; do
+        echo "YOLOv8${size} with ${model} backend Metrics" >> power_mem_readings.csv
 
-    tegrastats >> power_mem_readings.csv &
-    BGPID=$!
+        tegrastats >> power_mem_readings.csv &
+        BGPID=$!
 
-    ./.venv/bin/python test.py "$size"
+        ./.venv/bin/python test.py "$size" "$model"
 
-    sleep 3
-    kill $BGPID
+        sleep 3
+        kill $BGPID
 
-    echo "" >> power_mem_readings.csv
-
+        echo "" >> power_mem_readings.csv
+    done
 done

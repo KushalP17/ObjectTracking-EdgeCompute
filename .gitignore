@@ -6,3 +6,4 @@ runs/
 *.pt
 *.torchscript
 *.deb
+*.csv
