@@ -7,3 +7,4 @@ runs/
 *.torchscript
 *.deb
 *.csv
+*.cache

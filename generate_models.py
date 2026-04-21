@@ -14,4 +14,7 @@ for model_size in size_map:
     model = YOLO(f"yolov8{model_size}.pt")
 
     for export_type in export_map:
-        model.export(format=export_type, dynamic=True)
+        if(export_type == 'onnx'):
+            model.export(format=export_type, imgsz=512, half=True)
+        else:
+            model.export(format=export_type, imgsz=512, int8=True, data='coco128.yaml')

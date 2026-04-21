@@ -1,5 +1,4 @@
-# yolo_size_array=("n" "s" "m" "l" "x")
-yolo_size_array=("n")
+yolo_size_array=("n" "s" "m" "l" "x")
 model_type=("pt" "onnx" "engine")
 
 for size in "${yolo_size_array[@]}"; do
@@ -9,7 +8,7 @@ for size in "${yolo_size_array[@]}"; do
         tegrastats >> power_mem_readings.csv &
         BGPID=$!
 
-        ./.venv/bin/python test.py "$size" "$model"
+        ./.venv/bin/python test_all.py "$size" "$model"
 
         sleep 3
         kill $BGPID
